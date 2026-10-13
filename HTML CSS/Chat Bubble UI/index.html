@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chat Bubble UI</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main class="chat-window">
+            <section class="chat-header">
+                <div class="header-avatar">
+                    MS
+                    <span class="status-dot"></span>
+                </div>
+                <div>
+                    <div class="header-name">Md Saiful</div>
+                    <div class="header-status">Online</div>
+                </div>
+            </section>
+
+            <section class="chat-body">
+                <section class="message-row received">
+                    <div class="bubble">
+                        Hey! How's the new project coming along?
+                        <span class="msg-time">10:24 AM</span>
+                    </div>
+                </section>
+
+                <section class="message-row sent">
+                    <div class="bubble">
+                        Going great! Just finished the homepage design 🎨
+                        <span class="msg-time">10:26 AM</span>
+                    </div>
+                </section>
+
+                <section class="message-row received">
+                    <div class="bubble">
+                        That's awesome! Can you send me a preview?
+                        <span class="msg-time">10:27 AM</span>
+                    </div>
+                </section>
+
+                <section class="message-row sent">
+                    <div class="bubble">
+                        Sure, sending it right now 👍
+                        <span class="msg-time">10:28 AM</span>
+                    </div>
+                </section>
+
+                <section class="typing-row">
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                </section>
+            </section>
+
+            <section class="chat-input">
+                <input type="text" placeholder="Type a message..." />
+                <button class="send-btn">➤</button>
+            </section>
+        </main>
+    </body>
+</html>
