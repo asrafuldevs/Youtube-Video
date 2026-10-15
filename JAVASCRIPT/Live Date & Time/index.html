@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Live Date & Time</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main class="board">
+            <span class="rivet left"></span>
+            <span class="rivet right"></span>
+            <p class="board-label">Local Time</p>
+
+            <section class="flap-row time-row">
+                <div class="flap" id="hour">00</div>
+                <span class="colon">:</span>
+                <div class="flap" id="minute">00</div>
+                <span class="colon">:</span>
+                <div class="flap" id="second">00</div>
+            </section>
+
+            <section class="flap-row date-row">
+                <div class="flap" id="weekday">---</div>
+                <div class="flap" id="day">00</div>
+                <div class="flap" id="month">---</div>
+                <div class="flap" id="year">0000</div>
+            </section>
+        </main>
+        <script src="/script.js"></script>
+    </body>
+</html>
