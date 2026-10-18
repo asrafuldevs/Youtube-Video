@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Counter App</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main class="counter-card">
+            <p class="label">Count</p>
+
+            <div class="count" id="count" aria-live="polite">0</div>
+
+            <section class="controls">
+                <button
+                    class="btn btn-minus"
+                    id="decrease"
+                    type="button"
+                    aria-label="Decrease"
+                >
+                    −
+                </button>
+                <button
+                    class="btn btn-plus"
+                    id="increase"
+                    type="button"
+                    aria-label="Increase"
+                >
+                    +
+                </button>
+            </section>
+
+            <div class="divider"></div>
+
+            <section class="step-row">
+                <span class="step-label">Step</span>
+                <button class="chip active" type="button" data-step="1">
+                    1
+                </button>
+                <button class="chip" type="button" data-step="5">5</button>
+                <button class="chip" type="button" data-step="10">10</button>
+            </section>
+
+            <button class="reset" id="reset" type="button">Reset</button>
+        </main>
+        <script src="/script.js"></script>
+    </body>
+</html>
