@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Random Number Generator</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main class="card">
+            <p class="label">Your number</p>
+            <div class="result" id="result" aria-live="polite">?</div>
+
+            <p class="error" id="error"></p>
+
+            <section class="range-row">
+                <label class="field">
+                    <span class="field-label">Min</span>
+                    <input type="number" id="min" value="1" class="input" />
+                </label>
+
+                <label class="field">
+                    <span class="field-label">Max</span>
+                    <input type="number" id="max" value="100" class="input" />
+                </label>
+            </section>
+
+            <button class="generate" id="generate" type="button">
+                Generate
+            </button>
+
+            <div class="divider"></div>
+
+            <section class="history-head">
+                <span class="history-title">Recent</span>
+                <button class="clear" id="clear" type="button">Clear</button>
+            </section>
+            <section class="history" id="history">
+                <span class="empty">No number yet</span>
+            </section>
+        </main>
+
+        <script src="/script.js"></script>
+    </body>
+</html>
