@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Temperature Converter</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main class="card">
+            <p class="label">Temperature Converter</p>
+
+            <div class="feel" id="feel" aria-live="polite">
+                Type a temperature
+            </div>
+            <div class="meter">
+                <div class="meter-fill" id="meterFill"></div>
+            </div>
+
+            <p class="error" id="error"></p>
+
+            <label class="field">
+                <span class="field-label">Celsius</span>
+                <span class="input-wrap">
+                    <input
+                        class="input"
+                        id="celsius"
+                        type="number"
+                        step="any"
+                        inputmode="decimal"
+                        placeholder="0"
+                    />
+                    <span class="unit">°C</span>
+                </span>
+            </label>
+
+            <label class="field">
+                <span class="field-label">Fahrenheit</span>
+                <span class="input-wrap">
+                    <input
+                        class="input"
+                        id="fahrenheit"
+                        type="number"
+                        step="any"
+                        inputmode="decimal"
+                        placeholder="32"
+                    />
+                    <span class="unit">°F</span>
+                </span>
+            </label>
+
+            <label class="field">
+                <span class="field-label">Kelvin</span>
+                <span class="input-wrap">
+                    <input
+                        class="input"
+                        id="kelvin"
+                        type="number"
+                        step="any"
+                        inputmode="decimal"
+                        placeholder="273.15"
+                    />
+                    <span class="unit">K</span>
+                </span>
+            </label>
+
+            <div class="divider"></div>
+
+            <div class="presets-head">
+                <span class="presets-title">Quick values</span>
+                <button class="clear" id="clear" type="button">Clear</button>
+            </div>
+            <div class="presets">
+                <button class="chip" type="button" data-celsius="0">
+                    Freezing
+                </button>
+                <button class="chip" type="button" data-celsius="25">
+                    Room
+                </button>
+                <button class="chip" type="button" data-celsius="37">
+                    Body
+                </button>
+                <button class="chip" type="button" data-celsius="100">
+                    Boiling
+                </button>
+            </div>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

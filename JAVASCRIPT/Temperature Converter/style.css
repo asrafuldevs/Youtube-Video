@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #dff3f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    font-family: system-ui, sans-serif;
+    color: #4c6770;
+    padding-top: max(24px, env(safe-area-inset-top, 0px));
+    padding-bottom: max(24px, env(safe-area-inset-bottom, 0px));
+}
+
+/* Card */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #c5e3e9;
+    border-radius: 28px;
+    padding: 36px 32px 28px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 24px 48px -16px #0b3c4a33;
+}
+
+.label {
+    margin: 0 0 14px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Feel text and meter */
+.feel {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: #0b3c4a;
+}
+
+.meter {
+    height: 12px;
+    margin-top: 14px;
+    background-color: #e4f1f4;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.meter-fill {
+    width: 0;
+    height: 100%;
+    background-color: #a9c5cc;
+    border-radius: 999px;
+    transition:
+        width 0.35s ease,
+        background-color 0.35s ease;
+}
+
+.meter-fill.freezing {
+    background-color: #38bdf8;
+}
+
+.meter-fill.cold {
+    background-color: #22b8cf;
+}
+
+.meter-fill.mild {
+    background-color: #4cc38a;
+}
+
+.meter-fill.warm {
+    background-color: #f5b301;
+}
+
+.meter-fill.hot {
+    background-color: #f4511e;
+}
+
+/* Error message */
+.error {
+    min-height: 20px;
+    margin: 10px 0 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #d6336c;
+}
+
+/* Inputs */
+.field {
+    display: block;
+    margin-bottom: 14px;
+}
+
+.field-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.input-wrap {
+    position: relative;
+    display: block;
+}
+
+.input {
+    width: 100%;
+    padding: 14px 52px 14px 16px;
+    background-color: #f5fbfc;
+    border: 1px solid #c5e3e9;
+    border-radius: 12px;
+    color: #0b3c4a;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    transition: border-color 0.2s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #0891b2;
+}
+
+.unit {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 700;
+    color: #0891b2;
+}
+
+.divider {
+    width: 40px;
+    height: 2px;
+    background-color: #c5e3e9;
+    margin: 24px auto 18px;
+}
+
+/* Quick value chips */
+.presets-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.presets-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.clear {
+    padding: 4px 8px;
+    background-color: transparent;
+    border: none;
+    color: #8aa6ad;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.clear:hover {
+    color: #d6336c;
+}
+
+.presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border: 1px solid #c5e3e9;
+    border-radius: 999px;
+    color: #4c6770;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.chip:hover {
+    background-color: #0b3c4a;
+    border-color: #0b3c4a;
+    color: #ffffff;
+}
+
+/* Keyboard focus */
+.chip:focus-visible,
+.clear:focus-visible {
+    outline: 3px solid #0891b2;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .meter-fill,
+    .input,
+    .chip,
+    .clear {
+        transition: none;
+    }
+}
