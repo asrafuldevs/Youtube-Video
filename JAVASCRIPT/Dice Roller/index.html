@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dice Roller</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main class="card">
+            <p class="label">Total</p>
+            <div class="total" id="total" aria-live="polite">–</div>
+
+            <div class="dice-area" id="dice"></div>
+
+            <button class="roll" id="roll" type="button">Roll</button>
+
+            <div class="count-row">
+                <span class="count-label">Dice</span>
+                <button class="chip active" type="button" data-count="1">
+                    1
+                </button>
+                <button class="chip" type="button" data-count="2">2</button>
+                <button class="chip" type="button" data-count="3">3</button>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="history-head">
+                <span class="history-title">Recent rolls</span>
+                <button class="clear" id="clear" type="button">Clear</button>
+            </div>
+            <div class="history" id="history">
+                <span class="empty">No rolls yet</span>
+            </div>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

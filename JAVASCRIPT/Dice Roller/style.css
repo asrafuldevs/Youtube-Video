@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #efe8fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    font-family: system-ui, sans-serif;
+    color: #62597a;
+    padding-top: max(24px, env(safe-area-inset-top, 0px));
+    padding-bottom: max(24px, env(safe-area-inset-bottom, 0px));
+}
+
+/* Card */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd2f3;
+    border-radius: 28px;
+    padding: 36px 32px 28px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 24px 48px -16px #2b145833;
+}
+
+.label {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.total {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: #2b1458;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Dice */
+.dice-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-height: 120px;
+    margin: 12px 0 28px;
+}
+
+.die {
+    width: 96px;
+    height: 96px;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: #fffdf8;
+    border: 2px solid #ddd2f3;
+    border-radius: 22px;
+    box-shadow:
+        0 6px 0 #cfc2ea,
+        0 14px 22px #2b145826;
+}
+
+.pip {
+    width: 100%;
+    height: 100%;
+    max-width: 18px;
+    max-height: 18px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.pip.on {
+    background-color: #2b1458;
+}
+
+.die.rolling {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    20% {
+        transform: translateY(-14px) rotate(-14deg);
+    }
+    40% {
+        transform: translateY(0) rotate(12deg);
+    }
+    60% {
+        transform: translateY(-8px) rotate(-8deg);
+    }
+    80% {
+        transform: translateY(0) rotate(6deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Roll button */
+.roll {
+    width: 100%;
+    padding: 16px;
+    background-color: #7c3aed;
+    border: none;
+    border-radius: 14px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+.roll:hover {
+    background-color: #6526cc;
+}
+
+.roll:active {
+    transform: scale(0.98);
+}
+
+.roll:disabled {
+    background-color: #b9a6e0;
+    cursor: default;
+}
+
+/* Dice count chips */
+.count-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.count-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 6px;
+}
+
+.chip {
+    min-width: 44px;
+    padding: 8px 14px;
+    background-color: #ffffff;
+    border: 1px solid #ddd2f3;
+    border-radius: 999px;
+    color: #62597a;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.chip:hover {
+    border-color: #7c3aed;
+    color: #7c3aed;
+}
+
+.chip.active {
+    background-color: #2b1458;
+    border-color: #2b1458;
+    color: #ffffff;
+}
+
+.divider {
+    width: 40px;
+    height: 2px;
+    background-color: #ddd2f3;
+    margin: 28px auto 20px;
+}
+
+/* History */
+.history-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.history-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.clear {
+    padding: 4px 8px;
+    background-color: transparent;
+    border: none;
+    color: #9a91b3;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.clear:hover {
+    color: #d6336c;
+}
+
+.history {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 36px;
+}
+
+.history-item {
+    padding: 6px 14px;
+    background-color: #efe8fb;
+    border-radius: 999px;
+    color: #2b1458;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.history-item.latest {
+    background-color: #2b1458;
+    color: #ffffff;
+}
+
+.empty {
+    font-size: 14px;
+    color: #9a91b3;
+}
+
+/* Keyboard focus */
+.roll:focus-visible,
+.chip:focus-visible,
+.clear:focus-visible {
+    outline: 3px solid #7c3aed;
+    outline-offset: 3px;
+}
+
+@media (max-width: 380px) {
+    .die {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+    }
+    .dice-area {
+        gap: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .die.rolling {
+        animation: none;
+    }
+    .roll,
+    .chip,
+    .clear {
+        transition: none;
+    }
+}
