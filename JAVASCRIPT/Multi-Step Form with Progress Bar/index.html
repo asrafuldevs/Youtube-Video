@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Multi-Step Form with Progress Bar</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main class="form-box">
+            <h2>Create Your Profile</h2>
+
+            <section class="progress">
+                <div class="progress-fill"></div>
+                <div class="circle active">1</div>
+                <div class="circle">2</div>
+                <div class="circle">3</div>
+            </section>
+
+            <section class="step active">
+                <h3>Account Details</h3>
+                <div class="group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email" />
+                </div>
+                <div class="group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Create your password" />
+                </div>
+            </section>
+
+            <section class="step">
+                <h3>Personal Info</h3>
+                <div class="group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your name" />
+                </div>
+                <div class="group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="Create your phone" />
+                </div>
+            </section>
+
+            <section class="step">
+                <h3>Address</h3>
+                <div class="group">
+                    <label>City</label>
+                    <input type="text" placeholder="Enter your city" />
+                </div>
+                <div class="group">
+                    <label>Country</label>
+                    <input type="text" placeholder="Create your country" />
+                </div>
+            </section>
+
+            <section class="buttons">
+                <button class="back-btn hide">Back</button>
+                <button class="next-btn">Next</button>
+            </section>
+
+            <section class="success">
+                <div class="tick">✓</div>
+                <h3>All Done!</h3>
+                <p>Your profile has been created successfully.</p>
+            </section>
+        </main>
+
+        <script src="/script.js"></script>
+    </body>
+</html>
