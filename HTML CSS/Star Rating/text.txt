@@ -1,0 +1,11 @@
+titel: Star Rating
+
+😡
+
+😕
+
+😐
+
+🙂
+
+😍
